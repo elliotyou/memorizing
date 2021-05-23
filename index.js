@@ -19,7 +19,7 @@ const view = {
   },
   displayCars() {
     const rootElement = document.querySelector('#cards')
-    rootElement.innerHTML = this.getCardElement(10)
+    rootElement.innerHTML = Array.from(Array(52).keys()).map(index => this.getCardElement(index)).join("")
   },
   transformNumber(number) {
     switch (number) {

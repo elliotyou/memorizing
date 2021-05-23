@@ -20,3 +20,7 @@
   margin: 3px;
   font-size: 10px;
 }
+
+.card p:last-child{
+  transform: rotate(180deg);
+}

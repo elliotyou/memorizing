@@ -1,15 +1,25 @@
+const Symbol = [
+  'https://image.flaticon.com/icons/svg/105/105223.svg', // 黑桃
+  'https://image.flaticon.com/icons/svg/105/105220.svg', // 愛心
+  'https://image.flaticon.com/icons/svg/105/105212.svg', // 方塊
+  'https://image.flaticon.com/icons/svg/105/105219.svg' // 梅花
+]
+
 const view = {
-  getCardElement() {
+  getCardElement(index) {
+    const number = (index % 13) + 1
+    const symbol = Symbol[Math.floor(index / 13)]
+
     return `
       <div class="card">
-        <p>4</p>
-        <img src="https://image.flaticon.com/icons/svg/105/105220.svg">
-        <p>4</p>
+        <p>${number}</p>
+        <img src="${symbol}">
+        <p>${number}</p>
       </div>`
   },
   displayCars() {
     const rootElement = document.querySelector('#cards')
-    rootElement.innerHTML = this.getCardElement()
+    rootElement.innerHTML = this.getCardElement(6)
   }
 }
 

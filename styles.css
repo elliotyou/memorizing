@@ -1,5 +1,6 @@
 #cards {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -9,6 +10,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: 2px;
+  box-sizing: border-box;
 }
 
 .card img{

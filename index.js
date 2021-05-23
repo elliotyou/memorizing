@@ -7,15 +7,15 @@ const Symbol = [
 
 const view = {
   getCardElement(index) {
+    return `<div class="card back"></div>`
+  },
+  getCardContent(index) {
     const number = this.transformNumber((index % 13) + 1)
     const symbol = Symbol[Math.floor(index / 13)]
-
     return `
-      <div class="card">
         <p>${number}</p>
         <img src="${symbol}">
-        <p>${number}</p>
-      </div>`
+        <p>${number}</p>`
   },
   displayCars() {
     const rootElement = document.querySelector('#cards')

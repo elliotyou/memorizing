@@ -48,4 +48,10 @@ const utility = {
   }
 }
 
-view.displayCars() 
+view.displayCars()
+
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', event => {
+    console.log(card)
+  })
+})

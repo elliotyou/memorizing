@@ -7,7 +7,7 @@ const Symbol = [
 
 const view = {
   getCardElement(index) {
-    return `<div class="card back"></div>`
+    return `<div data-index="${index}" class="card back"></div>`
   },
   getCardContent(index) {
     const number = this.transformNumber((index % 13) + 1)
@@ -39,7 +39,7 @@ const view = {
     console.log(card)
     if (card.classList.contains('back')) {
       card.classList.remove('back')
-      card.innerHTML = this.getCardContent(10)
+      card.innerHTML = this.getCardContent(Number(card.dataset.index))
       return
     }
     card.classList.add('back')

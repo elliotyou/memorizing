@@ -34,6 +34,16 @@ const view = {
       default:
         return number
     }
+  },
+  flipCard(card) {
+    console.log(card)
+    if (card.classList.contains('back')) {
+      card.classList.remove('back')
+      card.innerHTML = this.getCardContent(10)
+      return
+    }
+    card.classList.add('back')
+    card.innerHTML = null
   }
 }
 
@@ -52,6 +62,6 @@ view.displayCars()
 
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('click', event => {
-    console.log(card)
+    view.flipCard(card)
   })
 })

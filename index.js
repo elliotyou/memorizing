@@ -1,9 +1,26 @@
+const GAME_STATE = {
+  FirstCardAwaits: 'FirstCardAwaits',
+  SecondCardAwaits: 'SecondCardAwaits',
+  CardsMatchFailed: 'CardsMatchFailed',
+  CardsMatched: 'CardsMatched',
+  GameFinished: 'GameFinished'
+}
+
 const Symbol = [
   'https://image.flaticon.com/icons/svg/105/105223.svg', // 黑桃
   'https://image.flaticon.com/icons/svg/105/105220.svg', // 愛心
   'https://image.flaticon.com/icons/svg/105/105212.svg', // 方塊
   'https://image.flaticon.com/icons/svg/105/105219.svg' // 梅花
 ]
+
+const controller = {
+  currentState: GAME_STATE.FirstCardAwaits,
+}
+
+const model = {
+  revealedCards: []
+}
+
 
 const view = {
   getCardElement(index) {

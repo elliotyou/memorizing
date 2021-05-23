@@ -5,5 +5,5 @@
 .card {
   flex: 7% 0 1;
   height: 8vw;
+  border: 2px solid #e0e0e0;
 }
-

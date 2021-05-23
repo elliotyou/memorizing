@@ -19,7 +19,7 @@ const view = {
   },
   displayCars() {
     const rootElement = document.querySelector('#cards')
-    rootElement.innerHTML = Array.from(Array(52).keys()).map(index => this.getCardElement(index)).join("")
+    rootElement.innerHTML = utility.getRandomNumberArray(52).map(index => this.getCardElement(index)).join("")
   },
   transformNumber(number) {
     switch (number) {
@@ -48,6 +48,4 @@ const utility = {
   }
 }
 
-// view.displayCars() 
-
-console.log(utility.getRandomNumberArray(10))
+view.displayCars() 

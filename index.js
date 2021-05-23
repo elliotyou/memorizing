@@ -7,7 +7,7 @@ const Symbol = [
 
 const view = {
   getCardElement(index) {
-    const number = (index % 13) + 1
+    const number = this.transformNumber((index % 13) + 1)
     const symbol = Symbol[Math.floor(index / 13)]
 
     return `
@@ -19,7 +19,21 @@ const view = {
   },
   displayCars() {
     const rootElement = document.querySelector('#cards')
-    rootElement.innerHTML = this.getCardElement(6)
+    rootElement.innerHTML = this.getCardElement(10)
+  },
+  transformNumber(number) {
+    switch (number) {
+      case 1:
+        return 'A'
+      case 11:
+        return 'J'
+      case 12:
+        return 'Q'
+      case 13:
+        return 'K'
+      default:
+        return number
+    }
   }
 }
 

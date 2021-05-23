@@ -4,5 +4,6 @@
 
 .card {
   flex: 7% 0 1;
+  height: 8vw;
 }
 

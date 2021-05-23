@@ -1,0 +1,8 @@
+#cards {
+  display: flex;
+}
+
+.card {
+  flex: 7% 0 1;
+}
+
